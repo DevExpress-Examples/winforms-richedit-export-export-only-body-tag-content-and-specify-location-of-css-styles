@@ -15,3 +15,7 @@ The code uses a custom **UriProvider** to accomplish this task. The `IUriProvide
 
 * [Form1.cs](./CS/ExportOnlyBodyContent/Form1.cs) (VB: [Form1.vb](./VB/ExportOnlyBodyContent/Form1.vb))
 * [MyUriProvider.cs](./CS/ExportOnlyBodyContent/MyUriProvider.cs) (VB: [MyUriProvider.vb](./VB/ExportOnlyBodyContent/MyUriProvider.vb))
+
+## Documentation
+
+* [Import an HTML File into the Rich Text Editor or Export a Document to HTML](https://docs.devexpress.com/WindowsForms/402852/controls-and-libraries/rich-text-editor/html-import-and-export)
