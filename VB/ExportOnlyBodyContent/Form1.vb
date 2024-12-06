@@ -3,13 +3,13 @@ Imports System.IO
 Imports System.Windows.Forms
 Imports DevExpress.XtraEditors
 Imports DevExpress.XtraEditors.Controls
-'#Region "#usings"
+#Region "#usings"
 Imports DevExpress.XtraRichEdit.Export
 Imports DevExpress.XtraRichEdit.Export.Html
 Imports DevExpress.Office.Services
 Imports System.Runtime.InteropServices
 
-'#End Region  ' #usings
+#End Region  ' #usings
 Namespace ExportOnlyBodyContent
 
     Public Partial Class Form1
@@ -25,7 +25,7 @@ Namespace ExportOnlyBodyContent
             InitComboCssExportType()
         End Sub
 
-'#Region "Initializing"
+#Region "Initializing"
         Private Sub InitComboHtmlExportType()
             Dim collExportHtml As ComboBoxItemCollection = edtExportHtmlType.Properties.Items
             collExportHtml.BeginUpdate()
@@ -69,8 +69,8 @@ Namespace ExportOnlyBodyContent
             memoEdit1.Text = String.Empty
         End Sub
 
-'#End Region  ' Initializing
-'#Region "Adjusting"
+#End Region  ' Initializing
+#Region "Adjusting"
         Private Function GetFileName(ByVal filter As String) As String
             Using saveFileDialog As SaveFileDialog = New SaveFileDialog()
                 saveFileDialog.Filter = filter
@@ -102,7 +102,7 @@ Namespace ExportOnlyBodyContent
             cssExportType = CType(edtCssStyleType.EditValue, CssPropertiesExportType)
         End Sub
 
-'#End Region
+#End Region
         Private Sub OnExportHtmlClick(ByVal sender As Object, ByVal e As EventArgs)
             Dim fileName As String = GetFileName("HyperText Markup Language Format|*.html")
             If String.IsNullOrEmpty(fileName) Then Return
@@ -114,7 +114,7 @@ Namespace ExportOnlyBodyContent
             SaveFile(fileName, stringHtml)
         End Sub
 
-'#Region "#exporting"
+#Region "#exporting"
         Private Sub ExportHtml(<Out> ByRef stringHtml As String, ByVal exporter As HtmlExporter, ByVal fileName As String)
             stringHtml = String.Empty
             Dim options As HtmlDocumentExporterOptions = New HtmlDocumentExporterOptions()
@@ -124,6 +124,6 @@ Namespace ExportOnlyBodyContent
             exporter = New HtmlExporter(richEditControl1.Model, options)
             stringHtml = exporter.Export()
         End Sub
-'#End Region  ' #exporting
+#End Region  ' #exporting
     End Class
 End Namespace
