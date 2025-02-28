@@ -1,6 +1,3 @@
-Imports System
-Imports System.IO
-Imports System.Windows.Forms
 Imports DevExpress.XtraEditors
 Imports DevExpress.XtraEditors.Controls
 #Region "#usings"
@@ -56,7 +53,7 @@ Namespace ExportOnlyBodyContent
         Private Sub richEditControl_DocumentLoaded(ByVal sender As Object, ByVal e As EventArgs)
             Try
                 Dim fileName As String = richEditControl1.Options.DocumentSaveOptions.CurrentFileName
-                If Not String.IsNullOrEmpty(fileName) Then
+                If Not [String].IsNullOrEmpty(fileName) Then
                     Using reader As StreamReader = New StreamReader(fileName)
                         memoEdit1.Text = reader.ReadToEnd()
                     End Using
@@ -66,7 +63,7 @@ Namespace ExportOnlyBodyContent
         End Sub
 
         Private Sub richEditControl_EmptyDocumentCreated(ByVal sender As Object, ByVal e As EventArgs)
-            memoEdit1.Text = String.Empty
+            memoEdit1.Text = [String].Empty
         End Sub
 
 #End Region  ' Initializing
@@ -80,10 +77,10 @@ Namespace ExportOnlyBodyContent
                 saveFileDialog.OverwritePrompt = True
                 saveFileDialog.DereferenceLinks = True
                 saveFileDialog.ValidateNames = True
-                If saveFileDialog.ShowDialog(Me) = DialogResult.OK Then Return saveFileDialog.FileName
+                If saveFileDialog.ShowDialog(Me) Is DialogResult.OK Then Return saveFileDialog.FileName
             End Using
 
-            Return String.Empty
+            Return [String].Empty
         End Function
 
         Private Sub SaveFile(ByVal fileName As String, ByVal value As String)
@@ -104,19 +101,19 @@ Namespace ExportOnlyBodyContent
 
 #End Region
         Private Sub OnExportHtmlClick(ByVal sender As Object, ByVal e As EventArgs)
-            Dim fileName As String = GetFileName("HyperText Markup Language Format|*.html")
-            If String.IsNullOrEmpty(fileName) Then Return
+            Dim fileName As String = Me.GetFileName("HyperText Markup Language Format|*.html")
+            If [String].IsNullOrEmpty(fileName) Then Return
             Dim svc As IUriProviderService = CType(richEditControl1.GetService(GetType(IUriProviderService)), IUriProviderService)
             svc.RegisterProvider(New MyUriProvider(Path.GetDirectoryName(fileName)))
-            Dim stringHtml As String = String.Empty
-            ExportHtml(stringHtml, Nothing, fileName)
+            Dim stringHtml As String = [String].Empty
+            Me.ExportHtml(stringHtml, Nothing, fileName)
             memoEdit2.Text = stringHtml
-            SaveFile(fileName, stringHtml)
+            Me.SaveFile(fileName, stringHtml)
         End Sub
 
 #Region "#exporting"
         Private Sub ExportHtml(<Out> ByRef stringHtml As String, ByVal exporter As HtmlExporter, ByVal fileName As String)
-            stringHtml = String.Empty
+            stringHtml = [String].Empty
             Dim options As HtmlDocumentExporterOptions = New HtmlDocumentExporterOptions()
             options.ExportRootTag = htmlExportType
             options.CssPropertiesExportType = cssExportType

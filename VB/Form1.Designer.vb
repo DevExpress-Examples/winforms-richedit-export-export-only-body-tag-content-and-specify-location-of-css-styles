@@ -66,8 +66,8 @@ Namespace ExportOnlyBodyContent
             Me.richEditControl1.Name = "richEditControl1"
             Me.richEditControl1.Size = New System.Drawing.Size(438, 322)
             Me.richEditControl1.TabIndex = 0
-            AddHandler Me.richEditControl1.EmptyDocumentCreated, New System.EventHandler(AddressOf Me.richEditControl_EmptyDocumentCreated)
-            AddHandler Me.richEditControl1.DocumentLoaded, New System.EventHandler(AddressOf Me.richEditControl_DocumentLoaded)
+            Me.richEditControl1.EmptyDocumentCreated += New System.EventHandler(AddressOf Me.richEditControl_EmptyDocumentCreated)
+            Me.richEditControl1.DocumentLoaded += New System.EventHandler(AddressOf Me.richEditControl_DocumentLoaded)
             ' 
             ' memoEdit2
             ' 
@@ -123,7 +123,7 @@ Namespace ExportOnlyBodyContent
             Me.btnLoadDocument.Size = New System.Drawing.Size(90, 23)
             Me.btnLoadDocument.TabIndex = 3
             Me.btnLoadDocument.Text = "Load Document"
-            AddHandler Me.btnLoadDocument.Click, New System.EventHandler(AddressOf Me.OnLoadDocumentClick)
+            Me.btnLoadDocument.Click += New System.EventHandler(AddressOf Me.OnLoadDocumentClick)
             ' 
             ' edtCssStyleType
             ' 
@@ -133,7 +133,7 @@ Namespace ExportOnlyBodyContent
             Me.edtCssStyleType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
             Me.edtCssStyleType.Size = New System.Drawing.Size(163, 20)
             Me.edtCssStyleType.TabIndex = 4
-            AddHandler Me.edtCssStyleType.SelectedValueChanged, New System.EventHandler(AddressOf Me.edtCssStyleType_SelectedValueChanged)
+            Me.edtCssStyleType.SelectedValueChanged += New System.EventHandler(AddressOf Me.edtCssStyleType_SelectedValueChanged)
             ' 
             ' labelControl1
             ' 
@@ -159,7 +159,7 @@ Namespace ExportOnlyBodyContent
             Me.edtExportHtmlType.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor
             Me.edtExportHtmlType.Size = New System.Drawing.Size(150, 20)
             Me.edtExportHtmlType.TabIndex = 7
-            AddHandler Me.edtExportHtmlType.SelectedValueChanged, New System.EventHandler(AddressOf Me.edtExportHtmlType_SelectedValueChanged)
+            Me.edtExportHtmlType.SelectedValueChanged += New System.EventHandler(AddressOf Me.edtExportHtmlType_SelectedValueChanged)
             ' 
             ' btnExportHtml
             ' 
@@ -168,7 +168,7 @@ Namespace ExportOnlyBodyContent
             Me.btnExportHtml.Size = New System.Drawing.Size(90, 23)
             Me.btnExportHtml.TabIndex = 8
             Me.btnExportHtml.Text = "Export HTML"
-            AddHandler Me.btnExportHtml.Click, New System.EventHandler(AddressOf Me.OnExportHtmlClick)
+            Me.btnExportHtml.Click += New System.EventHandler(AddressOf Me.OnExportHtmlClick)
             ' 
             ' splitContainer1
             ' 

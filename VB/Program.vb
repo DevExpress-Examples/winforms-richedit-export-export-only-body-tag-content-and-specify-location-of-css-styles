@@ -1,6 +1,3 @@
-Imports System
-Imports System.Windows.Forms
-
 Namespace ExportOnlyBodyContent
 
     Friend Module Program
@@ -10,9 +7,9 @@ Namespace ExportOnlyBodyContent
         ''' </summary>
         <STAThread>
         Sub Main()
-            Call Application.EnableVisualStyles()
+            Application.EnableVisualStyles()
             Application.SetCompatibleTextRenderingDefault(False)
-            Call Application.Run(New Form1())
+            Application.Run(New Form1())
         End Sub
     End Module
 End Namespace
