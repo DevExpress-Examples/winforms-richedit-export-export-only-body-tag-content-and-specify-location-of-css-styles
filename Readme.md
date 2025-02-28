@@ -14,8 +14,8 @@ The code uses a custom **UriProvider** to accomplish this task. The `IUriProvide
 
 ## Files to Review
 
-* [Form1.cs](./CS/ExportOnlyBodyContent/Form1.cs) (VB: [Form1.vb](./VB/ExportOnlyBodyContent/Form1.vb))
-* [MyUriProvider.cs](./CS/ExportOnlyBodyContent/MyUriProvider.cs) (VB: [MyUriProvider.vb](./VB/ExportOnlyBodyContent/MyUriProvider.vb))
+* [Form1.cs](./CS/Form1.cs) (VB: [Form1.vb](./VB/Form1.vb))
+* [MyUriProvider.cs](./CS/MyUriProvider.cs) (VB: [MyUriProvider.vb](./VB/MyUriProvider.vb))
 
 ## Documentation
 

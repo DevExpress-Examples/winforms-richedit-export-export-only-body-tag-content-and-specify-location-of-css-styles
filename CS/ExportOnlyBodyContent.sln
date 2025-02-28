@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportOnlyBodyContent", "ExportOnlyBodyContent\ExportOnlyBodyContent.csproj", "{A75C9051-96EF-4325-A04C-456F5EDFF098}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExportOnlyBodyContent", "ExportOnlyBodyContent.csproj", "{A75C9051-96EF-4325-A04C-456F5EDFF098}"
 	ProjectSection(WebsiteProperties) = preProject
 		Debug.AspNetCompiler.Debug = "True"
 		Release.AspNetCompiler.Debug = "False"
